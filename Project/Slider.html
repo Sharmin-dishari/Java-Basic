@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/cycle.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    <style>
+        *{
+            margin:0;padding:0;position:relative;
+        }
+        #content{
+width:600px;margin:auto;
+        }
+        #slider{
+            width: 600px; height: 300px;
+            overflow:hidden;
+        }
+        .details{
+            background: black; color:honeydew;
+            padding:5px 5px 5px 15px;margin-top:-70px;
+            opacity:0.7;
+        }
+        
+    #play,#pause,#next,#prev{
+        background:blue; color:white;
+        height: 25px;width: 25px; line-height:25px;
+        text-align: center; border-radius:25px;
+        border:1px solid white; position:absolute;
+        z-index: 10;cursor:pointer;
+    }
+    #play{
+        top: 10px; right: 20px;
+        transform: rotate(90deg);
+    }
+    #pause{
+        top:10px; right:50px;
+        transform: rotate(90deg);
+    }
+    #prev{
+        top: 100px; right: 20px;
+        
+    }
+    #next{
+        top: 100px; left: 20px;
+        
+    }
+    #pager{
+       position: absolute;z-index: 10;
+       bottom:100px;left:250px;
+    }
+    #pager a{
+        color:transparent;border: 1px solid white;
+        font-size:0;margin: 5px;padding: 5px; border-radius:10px;
+    }
+    #pager a.activeSlide{
+        background: red;
+    }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="play">&Delta;</div>
+        <div id="pause"> = </div>
+        <div id="next"> > </div>
+        <div id="prev"> < </div>
+        <div id="play"></div>
+        <div id="pager"></div>
+        
+        <div id="slider">
+            <div class="data">
+            <div class="image">
+                <img src="img/1.jpg" height="300px" width="600px">
+                <div class="details">
+                    <h1>This is heading One</h1>
+                    <p>This is paragraph content one</p>
+
+                </div>
+             </div>
+             <div class="image">
+                <img src="img/2.jpg" height="300px" width="600px">
+                <div class="details">
+                    <h1>This is heading Two</h1>
+                    <p>This is paragraph content onTwo</p>
+
+                </div>
+             </div>
+             <div class="image">
+                <img src="img/3.jpg" height="300px" width="600px">
+                <div class="details">
+                    <h1>This is heading Three</h1>
+                    <p>This is paragraph content Three</p>
+
+                </div>
+             </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
